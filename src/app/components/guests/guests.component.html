@@ -1,0 +1,37 @@
+<h3 class="header">Guests</h3>
+<form [formGroup]="guestsFormGroup" >
+    <div style="display: inline;"
+    formArrayName="guests"
+    *ngFor="let guest of guests['controls']; let i = index;" >
+        <div [formGroupName]="i">
+            <mat-form-field>
+                <mat-label>First Name</mat-label>
+                <input matInput formControlName="firstname" placeholder="First Name">
+                <mat-error *ngIf="guestsFormGroup.get('firstname')?.hasError('pattern')">
+    Your name must contain only latters
+                </mat-error>
+              </mat-form-field>
+    
+              <mat-form-field>
+                <mat-label>Last Name</mat-label>
+                <input matInput formControlName="lastname" placeholder="Last Name">
+                <mat-error *ngIf="guestsFormGroup.get('lastname')?.hasError('pattern')">
+    Your name must contain only latters
+                </mat-error>
+              </mat-form-field>
+    
+              <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput formControlName="email" placeholder="Email">
+                <mat-error *ngIf="guestsFormGroup.get('email')?.hasError('email')">
+    Your email must contain @ sign and has characters after it
+                </mat-error>
+              </mat-form-field>
+        </div>
+     
+    </div>
+    <button (click)="onAddGuest()" class="addGuest-btn">+</button>
+</form>
+<button class="primary-btn" (click)="onPrevious()">Previous</button>
+<button (click)='onNext()' class="primary-btn" style='margin-left: 60%;'>Next</button>
+

@@ -1,0 +1,28 @@
+<h2 class="header">Booking review</h2>
+<div>
+    <h3>Reservation Dates</h3>
+{{user.rangeDate | slice:4:15}}
+{{user.rangeDate | slice:61:73}}
+<h3>Main Guest </h3>
+<p>
+    {{user.firstname}}
+    {{user.lastname}}
+</p>
+<small>{{user.email}}</small>
+<!-- <h3>Guests</h3>
+     <p  *ngFor="let guest of guests">
+        {{guest.firstname}}
+        {{guest.lastname}}
+        <small>
+        {{guest.email}} 
+        </small>
+       
+    </p> -->
+
+</div>
+<div>
+    <button class="primary-btn" (click)="onPrevious()" style="margin-right: 50%;">Previous</button>
+    <button class="primary-btn" (click)='onSubmit()'>Submit</button>
+</div>
+
+

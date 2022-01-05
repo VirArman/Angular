@@ -1,0 +1,47 @@
+<div class="main">
+    <h3 class="header">Personal Details</h3>
+    <div class="d-flex justify-content-between">
+        <div class="text">
+        <p class="font">
+            Your personal information is never shared with anyone under any circumstances.  We ask for the e-mail address of each guest so that we can send them a link to download the custom app for our home (available for iOS and  Android) that contains our  House Manual, provides useful information about Sanibel, and allows you to access home automation features, such as locking and unlocking doors, controlling lights, etc.  
+        </p>
+        <p class="font">
+            Please note that the individual provided in Step 2 is the individual who will have the ability to control the different levels of access to our home through the apps of all other guests.  For example, a parent may not want children to be able to lock and unlock doors. The individual identified in Step 2 can control this feature on a per-guest basis.    
+        </p>
+    </div>
+    
+    <form class="form" [formGroup]="detailsFormGroup">
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstname" placeholder="First Name">
+            <mat-error *ngIf="detailsFormGroup.get('firstname')!.hasError('pattern')">
+                Your name must contain only latters
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastname" placeholder="Last Name">
+            <mat-error *ngIf="detailsFormGroup.get('lastname')!.hasError('pattern')">
+                Your name must contain only latters
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email" placeholder="Email">
+            <mat-error *ngIf="detailsFormGroup.get('email')!.hasError('email')">
+                Your email must contain @ sign and has characters after it
+            </mat-error>
+          </mat-form-field>
+        
+    </form>
+    </div>
+    <div class="d-flex justify-content-between btn-set">
+        <button class="primary-btn" (click)="onPrevious()">Previous</button>
+        <button (click)="onNext()" class="primary-btn">Next</button>
+    </div>
+</div>
+
+
+

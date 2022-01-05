@@ -1,0 +1,22 @@
+<h3 class="header">Select Dates</h3>
+<nz-tabset class="range-date-picker">
+    <nz-tab >
+      <nz-range-picker nzInline [(ngModel)]="rangeDate" (ngModelChange)="onChange($event)"></nz-range-picker>
+    </nz-tab>
+  </nz-tabset>
+  <div class="headings">
+    <h4>Arrival</h4>
+    
+    <h4>Departure</h4>
+  </div>
+  <div class="dates">
+    <p class="arrival">
+    {{strRangeDate | slice:4:15 }}
+  </p>
+  <p class="departure">
+    {{strRangeDate | slice:61:73}}
+  </p>
+  </div>
+  
+
+<button (click)="onNext()" class="next" >Next</button>

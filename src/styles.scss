@@ -1,0 +1,45 @@
+@import "~ng-zorro-antd/ng-zorro-antd.min.css";
+body{
+    background-image: url(C:\Users\dp_paros\Desktop\angular\final\src\assets\background.png);
+    --primary: #006994;
+}
+button {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.primary-btn{
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: var(--primary);
+    border-radius: 25px;
+    padding: 3px 25px;
+    width: 150px;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color:black !important;
+   }
+  
+   .mat-form-field-underline {
+    /*change color of underline*/
+    background-color: var(--primary) !important;
+  } 
+  
+.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: var(--primary) !important;;
+  }

@@ -1,0 +1,59 @@
+.header{
+    text-align: center;
+    font-size: 30px;
+    color: var(--primary);
+}
+
+.next{
+    font-weight: 400;
+    font-size: 18px;
+    color: #FFFFFF;
+    background-color: var(--primary);
+    border-radius: 25px;
+    padding: 3px 25px;
+    width: 150px;
+    margin-left:75%;
+ }
+
+ 
+ nz-tabset:host nz-tab::ng-deep .ant-tabs-tabpane {
+    padding: 24px;
+    overflow: auto;
+  }
+
+.range-date-picker{
+    height:5%;
+    margin-left: 15%;
+}
+
+
+h4{
+    font-size: 16px;
+    margin-left: 40%;
+    color: var(--primary);
+}
+.dates{
+   display: flex;
+    margin-left: 20%;
+font-size: 30px;
+font-style: normal;
+font-weight: 300;
+line-height: 37px;
+letter-spacing: 0em;
+text-align: left;
+;
+
+}
+.headings{
+    
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    display: flex;
+    margin-right: 25%;
+    color: var(--primary);
+}
+.arrival{
+    width:51%;
+    padding-left:4.5%;
+}
